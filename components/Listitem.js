@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 100,
     flexDirection: 'row', // 横並び
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    marginVertical: 5,
   },
   leftContainer: {
     width: 100,
