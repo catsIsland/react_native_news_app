@@ -6,10 +6,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ListItem />
-      <ListItem />
-      <ListItem />
-      <ListItem />
+      <ListItem
+        imageUrl={'https://picsum.photos/id/20/200/300'}
+        title={'Both Android and iOS allow you to display formatted text by annotating Both Android and iOS allow you to display formatted text by annotating'}
+        author={'from ANAB'}
+      />
       <StatusBar style="auto" />
     </View >
   );

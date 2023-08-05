@@ -1,8 +1,15 @@
 import { StyleSheet, Image, Text, View } from 'react-native';
 
-export const ListItem = () => {
-  // テキスト変数
-  const someText = 'aaBoth Android and iOS allow you to display formatted text by annotating Both Android and iOS allow you to display formatted text by annotating'
+/**
+ * 
+ * @param {
+ * imageUrl: 画像URL(string)
+ * title: タイトル(string)
+ * author: ニュース提供元(string)
+ * } props 
+ * @returns 
+ */
+export const ListItem = (props) => {
 
   return (
     <View style={styles.itemContainer}>
@@ -10,14 +17,16 @@ export const ListItem = () => {
       <View style={styles.leftContainer}>
         <Image
           style={styles.image}
-          source={{
-            uri: 'https://picsum.photos/id/1/200/300',
-          }}
+          source={{ uri: props.imageUrl }}
         />
       </View>
       <View style={styles.rightContainer}>
-        <Text numberOfLines={3} style={styles.mainText}>{someText}</Text>
-        <Text style={styles.subText}>from VXX</Text>
+        <Text numberOfLines={3} style={styles.mainText}>
+          {props.title}
+        </Text>
+        <Text style={styles.subText}>
+          {props.author}
+        </Text>
       </View>
     </View>
   );
