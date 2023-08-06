@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { ListItem } from './components/ListItem';
 import articles from './dummies/articles';
 
@@ -17,7 +17,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {items}
+      <ScrollView>
+        {items}
+      </ScrollView>
       <StatusBar style="auto" />
     </View >
   );
@@ -27,8 +29,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, // 画面を全部使うという意味
     backgroundColor: '#eee',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 
