@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, SafeAreaView } from 'react-native';
 import { ListItem } from './components/ListItem';
 import articles from './dummies/articles';
 
@@ -16,12 +16,12 @@ export default function App() {
   })
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView>
         {items}
       </ScrollView>
       <StatusBar style="auto" />
-    </View >
+    </SafeAreaView >
   );
 }
 
