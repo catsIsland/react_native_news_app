@@ -1,18 +1,18 @@
-import { StyleSheet, Image, Text, View } from 'react-native';
-
+import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
 /**
  * 
  * @param {
  * imageUrl: 画像URL(string)
  * title: タイトル(string)
  * author: ニュース提供元(string)
+ * onPress: クリックされた時のイベント
  * } props 
  * @returns 
  */
 export const ListItem = (props) => {
 
   return (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={props.onPress}>
       {/* 写真 */}
       <View style={styles.leftContainer}>
         <Image
@@ -28,7 +28,7 @@ export const ListItem = (props) => {
           {props.author}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
